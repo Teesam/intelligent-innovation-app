@@ -1,0 +1,126 @@
+.Trend{
+    box-shadow: 0px 5px 15px 0px rgb(224, 222, 222);
+    background-color: white;
+    border-radius: 5px;
+    margin: 3rem 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Trend > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.Trend-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 1.3rem 0;
+    transition: .4s;
+    color: grey;
+}
+
+.Trend-item:hover{
+    background-color: rgb(240, 238, 238);
+}
+
+.Trend-item::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgb(224, 222, 222);
+}
+
+.Trend-item > p{
+    margin-right: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 490px){
+
+    .Trend{
+        box-shadow: 0px 5px 15px 0px rgb(224, 222, 222);
+        background-color: white;
+        border-radius: 5px;
+        margin: 3rem 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Trend > ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .Trend-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        padding: 1.3rem 0;
+        transition: .4s;
+        color: grey;
+    }
+    
+    .Trend-item:hover{
+        background-color: rgb(240, 238, 238);
+    }
+    
+    .Trend-item::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: unset;
+        bottom: 0;
+        width: unset;
+        height: 1px;
+        background-color: rgb(224, 222, 222);
+    }
+    
+    .Trend-item > p{
+        margin-right: .5rem;
+    }
+    
+    
+
+}

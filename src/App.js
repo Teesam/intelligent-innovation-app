@@ -1,24 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import GeneratePhoto from './components/generate-photo/generate-photo';
+import Nav from './components/nav/nav';
+import Search from './components/search/search';
+import Trend from './components/trend/trend';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store = { store }>
+      <div className="App">
+
+        <div id = 'nav-holder'>
+          <div id = 'logo-holder'>
+            <i id = 'logo-icon' className = 'fas fa-cube'></i>
+            <h1>bluecube</h1>
+          </div>
+          <Nav />
+        </div>
+
+        <div id = 'body-holder'>
+          <div id = 'search-holder'>
+
+            <Search />
+
+            <div id = 'profile-holder'>
+              <i id = 'notification-icon' className = 'fas fa-bell'></i>
+              {/* <img /> */}
+              <p>
+                Abigail
+                <i className = 'fas fa-chevron-down'></i>
+              </p>
+            </div>
+          </div>
+
+          <Trend />
+
+          <div id = 'photo-holder'>
+
+            <GeneratePhoto />
+
+          </div>
+        </div>
+
+      </div>
+    </Provider>
   );
 }
 

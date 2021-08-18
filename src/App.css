@@ -1,38 +1,204 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --purple: rgb(150, 8, 155);
+}
+
 .App {
   text-align: center;
+  overflow: hidden;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo-holder{
+  color: var(--purple);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#nav-holder{
+  width: 20%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 3rem 3rem 0 3rem;
+  position: relative;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+#nav-holder::after{
+  content: '';
+  background-color: rgb(219, 217, 217);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#logo-icon{
+  margin-right: .5rem;
+  font-size: 1rem;
+}
+
+#body-holder{
+  width: 80%;
+  padding: 3rem;
+  margin-left: 3rem;
+}
+
+#profile-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+  color: var(--purple);
+  font-weight: 600;
+}
+
+#profile-holder > p{
+  cursor: pointer;
+}
+
+#profile-holder > p >i{
+  margin-left: .5rem;
+}
+
+#notification-icon{
+  color: var(--purple);
+  cursor: pointer;
+}
+
+#search-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#photo-holder{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 490px){
+  .App {
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #logo-holder{
+    color: var(--purple);
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
   }
+  
+  #nav-holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3rem 3rem 0 3rem;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #nav-holder::after{
+    content: '';
+    background-color: rgb(219, 217, 217);
+    position: absolute;
+    right: 0;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    width: unset;
+    height: 1px;
+  }
+  
+  #logo-icon{
+    margin-right: .5rem;
+    font-size: 1rem;
+  }
+  
+  #body-holder{
+    width: 100%;
+    padding: 3rem;
+    margin-left: unset;
+  }
+  
+  #profile-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  #profile-holder > p{
+    cursor: pointer;
+  }
+  
+  #profile-holder > p >i{
+    margin-left: .5rem;
+  }
+  
+  #notification-icon{
+    color: var(--purple);
+    cursor: pointer;
+  }
+  
+  #search-holder{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #photo-holder{
+    width: 100%;
+  }
+
 }
